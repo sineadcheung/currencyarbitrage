@@ -1,0 +1,60 @@
+<html>
+  <head>
+        <title>LiveRamp Case-Study</title>
+  </head>
+  <body>
+
+  <h2>Bitcoin Exchange Recommendation</h2>
+
+  <select id="select" onchange="myFunction()">
+    <option value="default">Choose your currency</option>
+    <option value="USD">BTC to USD</option>
+    <option value="GBP">BTC to GBP</options>
+  </select>
+
+    <h3>Coinbase Exchange Rate</h3>
+
+    <p id="btc2usd"></p>
+    <p id="exchangerate"></p>
+    <p id="poundrate"></p>
+    <p id="btc2pound"></p>
+
+    <h3>Coindesk Rate</h3>
+    <p id="coindesk"></p>
+    <p id="btc2usd2"></p>
+
+    <h3>Bitstamp</h3>
+    <p id="bitstamp"></p>
+    <p id="btc3usd3"></p>
+
+
+    <h3>Bitfinex </h3>
+    <p id="bitfinex"></p>
+
+
+    <h3></h3>
+
+  </body>
+
+
+<!-- script -->
+    <script>
+      function myFunction(){
+
+        var selectValue = document.getElementById("select").value;
+
+        if (selectValue === "USD"){
+          USD();
+        } else if( selectValue === "GBP"){
+          GBP();
+        }
+      }
+
+    </script>
+    <script src="script/exchangerate.js"></script>
+    <script src="script/poundprice.js"></script>
+
+
+
+
+</html>
