@@ -1,5 +1,6 @@
 <html>
   <head>
+        <meta charset="UTF-8">
         <title>LiveRamp Case-Study</title>
   </head>
   <body>
@@ -8,8 +9,8 @@
 
   <select id="select" onchange="myFunction()">
     <option value="default">Choose your currency</option>
-    <option value="USD">BTC to USD</option>
-    <option value="GBP">BTC to GBP</options>
+    <option value="USD">1 BTC to USD</option>
+    <option value="GBP">1 BTC to EUR</options>
   </select>
 
     <h3>Coinbase Exchange Rate</h3>
@@ -22,39 +23,57 @@
     <h3>Coindesk Rate</h3>
     <p id="coindesk"></p>
     <p id="btc2usd2"></p>
+    <p id="btc2pound2"></p>
 
     <h3>Bitstamp</h3>
     <p id="bitstamp"></p>
     <p id="btc3usd3"></p>
+    <p id="bitstamppound"></p>
 
 
     <h3>Bitfinex </h3>
     <p id="bitfinex"></p>
+    <p id="bitfinexpound"></p>
 
 
-    <h3></h3>
+    <h3>Sell BTC on: </h3>
+    <p id="sellmaxeuro"></p>
+    <p id="sellmaxusd"></p>
+
+
+    <h3>Buy BTC on: </h3>
+    <p id="buymineuro"></p>
+    <p id="buyminusd"></p>
+
+    <h3> 1 USD to Euro Exchange Rate</h3>
+    <p id="usd2euro"></p>
+
+    <h3> 1 Euro to USD Exchange Rate</h3>
+    <p id="euro2usd"></p>
+
+    <h3>Buy BTC with:</h3>
+    <p id="buyfiat"></p>
+    <h3>Sell BTC with:</h3>
+    <p id="sellfiat"></p>
+
 
   </body>
 
 
 <!-- script -->
+
     <script>
       function myFunction(){
-
         var selectValue = document.getElementById("select").value;
-
         if (selectValue === "USD"){
           USD();
         } else if( selectValue === "GBP"){
-          GBP();
+          EURO();
         }
       }
-
     </script>
     <script src="script/exchangerate.js"></script>
-    <script src="script/poundprice.js"></script>
-
-
+    <script src="script/euro.js"></script>
 
 
 </html>
